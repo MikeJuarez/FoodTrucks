@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_filter">
+
+    <target
+        android:name="@string/filter"
+        android:animation="@animator/vectalign_morph_animator_start_to_end" />
+<!--
+    <target
+        android:name="@string/groupFilterTruck"
+        android:animation="@animator/rotate_filter_to_truck" />-->
+
+
+
+</animated-vector>

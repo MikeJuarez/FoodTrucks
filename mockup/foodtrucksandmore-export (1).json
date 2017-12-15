@@ -1,0 +1,90 @@
+{
+  "food_trucks" : [ {
+    "address" : "14601 Country Walk Drive Miami, FL 33186",
+    "days_open" : [ {
+      "F" : true,
+      "M" : true,
+      "R" : true,
+      "S" : true,
+      "T" : true,
+      "W" : true,
+      "Y" : true
+    } ],
+    "food_type" : "American",
+    "image_location" : "https://s3-media1.fl.yelpcdn.com/bphoto/oBERFVcAWRYAeCAHqpfJNg/258s.jpg",
+    "lat" : "25.6305875",
+    "longitude" : "-80.4284531",
+    "menu_location" : "https://roaminghunger.com/options-2-eat/",
+    "name" : "Options 2 eat",
+    "owner_id" : 1000000,
+    "time_closed" : 930,
+    "time_open" : 1230,
+    "type" : "foodtruck",
+    "website" : "https://roaminghunger.com/options-2-eat/"
+  }, {
+    "address" : "401 Northeast 5th Terrace Fort Lauderdale, FL, 33301 United States",
+    "days_open" : [ {
+      "F" : true,
+      "M" : true,
+      "R" : true,
+      "S" : true,
+      "T" : true,
+      "W" : true,
+      "Y" : true
+    } ],
+    "food_type" : "American",
+    "image_location" : "https://static1.squarespace.com/static/57daa67ce3df28673b3eb48e/t/581253fa03596ebf55768367/1477596270389/IMG_3150.JPG",
+    "lat" : "26.1265431",
+    "longitude" : "-80.1379936",
+    "menu_location" : "http://www.bctacos.com/foodtrucks/",
+    "name" : "B.C. Tacos",
+    "owner_id" : 1000001,
+    "time_closed" : 2200,
+    "time_open" : 800,
+    "type" : "foodtruck",
+    "website" : "http://www.bctacos.com/"
+  }, {
+    "address" : "245 Beasley Road, Orlando, FL 32765",
+    "days_open" : [ {
+      "F" : true,
+      "M" : true,
+      "R" : true,
+      "S" : true,
+      "T" : true,
+      "W" : true,
+      "Y" : true
+    } ],
+    "food_type" : "Latin",
+    "image_location" : "https://roaminghunger.com/img/trucks/original/50a5a0b4-a70c-499f-b791-479146204482.jpg",
+    "lat" : "28.6370918",
+    "longitude" : "-81.2138913",
+    "menu_location" : "none",
+    "name" : "Curbside Chef",
+    "owner_id" : 1000002,
+    "time_closed" : 300,
+    "time_open" : 1100,
+    "type" : "foodtruck",
+    "website" : "https://twitter.com/curbsidechef?lang=en"
+  } ],
+  "path" : {
+    "to" : {
+      "geofire" : {
+        "1000000" : {
+          ".priority" : "dhwccccucp",
+          "g" : "dhwccccucp",
+          "l" : [ 25.6305875, -80.4284531 ]
+        },
+        "1000001" : {
+          ".priority" : "dhxh8kjq1k",
+          "g" : "dhxh8kjq1k",
+          "l" : [ 26.1265431, -80.1379936 ]
+        },
+        "1000002" : {
+          ".priority" : "djn4zvjz5h",
+          "g" : "djn4zvjz5h",
+          "l" : [ 28.6370918, -81.2138913 ]
+        }
+      }
+    }
+  }
+}

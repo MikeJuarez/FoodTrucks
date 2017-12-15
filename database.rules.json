@@ -1,0 +1,17 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "food_trucks": {
+    	".indexOn": "owner_id",
+    },
+    "path": {
+      "to" : {
+        "geofire" : {
+         ".indexOn": "g"
+        }
+      }
+    
+    } 
+  }
+}

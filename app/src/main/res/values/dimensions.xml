@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- global -->
+    <dimen name="margins_space_between_views">8dp</dimen>
+    <dimen name="margins_space_between_views_double">16dp</dimen>
+    <dimen name="margins_recyclerview_image_width">80dp</dimen>
+    <dimen name="margins_recyclerview_image_height">80dp</dimen>
+    <dimen name="horizontal_viewholder_dimen">150dp</dimen>
+    <dimen name="edittext_width">200dp</dimen>
+    <dimen name="card_elevation">16dp</dimen>
+    <dimen name="card_subcard_header">16sp</dimen>
+    <dimen name="card_subcard_text">12sp</dimen>
+    <integer name="fadeDuration">1000</integer>
+
+    <!-- fragment_foodspotlist-->
+    <dimen name="fragment_foodspotlist_rv_margin">16dp</dimen>
+
+
+
+
+
+
+
+
+</resources>

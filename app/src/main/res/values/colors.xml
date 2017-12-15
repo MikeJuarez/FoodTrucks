@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="coloroffWhite">#e3e3e3</color>
+    <color name="blacktransparent">#40000000</color>
+    <color name="bluetransparent">#9096E5FC</color>
+    <color name="whitetransparent">#40FFFFFF</color>
+    <color name="colorBlue">#96E5FC</color>
+
+    <!-- ToolBar -->
+    <color name="toolbar_text">#FFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="colorSecondaryGreen">#EE7500</color>
+    <color name="colorSecondaryGreenLight">#80e27e</color>
+    <color name="colorSecondaryGreenDark">#087f23</color>
+    <color name="colorSecondaryText">#96E5FC</color>
+
+    <!--Secondary Colors-->
+    <color name="colorPrimaryPurple">#1B1D1E</color>
+    <color name="colorPrimaryPurpleLight">#ff5bff</color>
+    <color name="colorPrimaryPurpleDark">#1B1D1E</color>
+    <color name="colorPrimaryText">#FFEA00</color>
+
+    <!-- ViewHolder -->
+    <color name="colorCardBackGround">#F1EDEA</color>
+
+    <!-- Fragment_FoodSpotList -->
+    <color name="fragment_foodspotlist_detail_background">#F1EDEA</color>
+
+    <!-- FoodTruck Icon Colors -->
+    <color name="foodtruck_color_maroon">#800000</color>
+    <color name="foodtruck_color_green">#00FF00</color>
+    <color name="foodtruck_color_pink">#FF00FF</color>
+    <color name="foodtruck_color_purple">#9900ff</color>
+    <color name="foodtruck_color_red">#ff0000</color>
+    <color name="foodtruck_color_white">#FFFFFF</color>
+    <color name="foodtruck_color_yellow">#FFFF00</color>
+
+
+</resources>

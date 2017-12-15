@@ -1,0 +1,161 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryPurple</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryPurpleDark</item>
+        <item name="colorAccent">@color/colorSecondaryGreen</item>
+    </style>
+
+    <!-- Global -->
+    <style name="global_app_background">
+        <item name="android:background">@color/colorSecondaryGreen</item>
+    </style>
+
+    <style name="global_edittext">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">@dimen/margins_space_between_views</item>
+    </style>
+
+    <style name="viewholders">
+        <item name="android:layout_width">@dimen/horizontal_viewholder_dimen</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="viewholders_smaller">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+
+
+    <style name="viewholders_foodstyle">
+        <item name="android:layout_width">@dimen/horizontal_viewholder_dimen</item>
+        <item name="android:layout_height">@dimen/horizontal_viewholder_dimen</item>
+        <item name="android:layout_marginLeft">@dimen/margins_space_between_views</item>
+        <item name="android:layout_marginBottom">@dimen/margins_space_between_views</item>
+    </style>
+
+    <style name="viewholder_text">
+        <item name="android:paddingLeft">@dimen/margins_space_between_views</item>
+        <item name="android:paddingRight">@dimen/margins_space_between_views</item>
+        <item name="android:paddingBottom">@dimen/margins_space_between_views</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/coloroffWhite</item>
+    </style>
+
+    <style name="viewholder_center_text">
+        <item name="android:paddingLeft">@dimen/margins_space_between_views</item>
+        <item name="android:paddingRight">@dimen/margins_space_between_views</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/coloroffWhite</item>
+        <item name="android:background">#40000000</item>
+    </style>
+
+    <style name="global_purple_buttons">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:background">@color/colorPrimaryPurple</item>
+        <item name="android:radius">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">@dimen/margins_space_between_views</item>
+    </style>
+
+    <!-- fragment_address-->
+    <style name="fragment_address_hungry_textview">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">102sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/margins_space_between_views</item>
+    </style>
+
+    <style name="fragment_address_letseat">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/margins_space_between_views</item>
+    </style>
+
+    <style name="fragment_address_ownbusiness">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">@dimen/margins_space_between_views</item>
+    </style>
+
+    <!-- fragment_foodspotlist -->
+    <style name="fragment_foodspotlist_view_details">
+        <item name="android:background">@color/colorCardBackGround</item>
+    </style>
+
+    <style name="fragment_foodspotlist_rv">
+        <item name="android:layout_marginBottom">@dimen/margins_space_between_views</item>
+    </style>
+
+    <style name="fragment_foodspotlist_menu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margins_space_between_views</item>
+        <item name="android:layout_marginTop">@dimen/margins_space_between_views</item>
+        <item name="android:layout_marginBottom">@dimen/margins_space_between_views</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="fragment_foodspotlist_submenu_buttons">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+
+        <item name="android:layout_marginLeft">@dimen/margins_space_between_views</item>
+
+
+    </style>
+
+    <!-- fragment_foodspotlist_details -->
+    <style name="fragment_foodspotdetails_card">
+        <item name="android:layout_margin">@dimen/margins_space_between_views</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="fragment_fooodspotdetails_framelayout_white">
+        <item name="android:background">@color/coloroffWhite</item>
+    </style>
+
+    <style name="fragment_fooodspotdetails_framelayout_dark">
+        <item name="android:background">@color/colorPrimaryPurple</item>
+    </style>
+
+    <style name="fragment_fooodspotdetails_framelayout_secondary">
+        <item name="android:background">@color/colorSecondaryGreen</item>
+    </style>
+
+    <style name="fragment_foodspotdetails_subcard">
+        <item name="android:layout_margin">@dimen/margins_space_between_views_double</item>
+    </style>
+
+    <style name="fragment_foodspotdetails_subcard_headers">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/card_subcard_header</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/margins_space_between_views</item>
+        <item name="android:layout_marginRight">@dimen/margins_space_between_views</item>
+        <item name="android:layout_marginTop">@dimen/margins_space_between_views</item>
+    </style>
+
+    <style name="fragment_foodspotdetails_subcard_text">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/card_subcard_header</item>
+        <item name="android:layout_marginLeft">@dimen/margins_space_between_views</item>
+        <item name="android:layout_marginRight">@dimen/margins_space_between_views</item>
+    </style>
+
+</resources>

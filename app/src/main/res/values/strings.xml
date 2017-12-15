@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Food Trucks And More</string>
+
+    <string name="fragment_address_hungry">Hungry?</string>
+    <string name="fragment_address_letseat">Enter Your Address:</string>
+    <string name="fragment_address_zipcode">Enter Zip Code or Address</string>
+    <string name="fragment_address_showmebutton">Find FoodSpots</string>
+    <string name="fragment_address_ownfoodbus">Own A FoodSpot?</string>
+
+    <string name="reverse_geocoding_pre">https://maps.googleapis.com/maps/api/geocode/json?address=</string>
+    <string name="distance_matrix_pre">https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial</string>
+    <string name="distance_matrix_tail">key=</string>
+
+    <!-- Menu Strings -->
+    <string name="menu_favorite">Favorite</string>
+
+    <!-- Marker String -->
+    <string name="point_of_interest">FoodSpot Point Of Interest</string>
+
+    <!-- Transition Names -->
+    <string name="transition_foodspot_image">TRANSITION_NAME_FOOTSPOT_IMAGE</string>
+    <string name="transition_filter_list_icon">TRANSITION_NAME_FILTER_LIST_ICON</string>
+    <string name="transition_grid_view_icon">TRANSITION_NAME_GRID_VIEW_ICON</string>
+    <string name="transition_foodspot_recyclerview">TRANSITION_NAME_RECYCLERVIEW_ICON</string>
+
+    <string name="filter">filter</string>
+    <string name="truck">foodtruck</string>
+    <string name="groupFilterTruck">groupFilterTruck</string>
+    <string name="groupTruckFilter">groupFilterTruck</string>
+
+
+    <!-- Error Message -->
+    <string name="error_retrieving_address">Sorry, there was an error retrieving the address.</string>
+    <string name="error_empty_address">Please re-enter the address.</string>
+    <string name="error_blank_address">Address field is blank, please enter an address!</string>
+    <string name="error_current_location">There was an error retrieving your location, please try again.</string>
+
+    <!-- Fragment_FoodSpotDetails -->
+    <string name="heading_description">Description:"</string>
+    <string name="heading_address">Address:</string>
+    <string name="heading_hours">Hours:</string>
+    <string name="heading_menu">Menu:</string>
+    <string name="heading_website">Website:</string>
+
+</resources>
+

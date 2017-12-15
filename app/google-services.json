@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "158761242293",
+    "firebase_url": "https://foodtrucksandmore.firebaseio.com",
+    "project_id": "foodtrucksandmore",
+    "storage_bucket": "foodtrucksandmore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158761242293:android:9d4424162f3f138e",
+        "android_client_info": {
+          "package_name": "michael_juarez.foodtrucksandmore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158761242293-618e5cd9nv93f1npjebbnmkq69g7183d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "michael_juarez.foodtrucksandmore",
+            "certificate_hash": "fa05f2ba732a491f4003796628678be715ac69ca"
+          }
+        },
+        {
+          "client_id": "158761242293-2drn77893u7tuf3ngkmfr7ct7s3fv15q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8ooa3p6Q-h7Sn0EYROOblCQaVvkhn7HE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158761242293-2drn77893u7tuf3ngkmfr7ct7s3fv15q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

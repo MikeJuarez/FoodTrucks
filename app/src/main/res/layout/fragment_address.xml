@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/global_app_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_address_hungry_textview"
+            style="@style/fragment_address_hungry_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fragment_address_hungry"/>
+
+
+        <TextView
+            style="@style/fragment_address_letseat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fragment_address_letseat"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/fragment_address_zipcode_et"
+                style="@style/global_edittext"
+                android:layout_width="@dimen/edittext_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/fragment_address_zipcode"
+                android:singleLine="true"/>
+
+            <ImageButton
+                android:id="@+id/address_current_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_current_location"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/fragment_address_showme_button"
+            style="@style/global_purple_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fragment_address_showmebutton"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragment_address_ownbus_button"
+        style="@style/fragment_address_ownbusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:text="@string/fragment_address_ownfoodbus"/>
+
+</FrameLayout>

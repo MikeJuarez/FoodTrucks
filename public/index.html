@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Trucks and More</title>
+<style></style>
+</head>
+
+<body>
+<div class="container" style="margin-top: 20px;">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="card mx-auto" style="width: 800px; padding: 20px">
+        <h2 class="card-title" style="text-align: center"> Food Trucks and More </h2>
+        <h4 class="card-title" style="text-align: center"> Add a new FootSpot</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="name">Business Name:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="address">Street Address:</label>
+                <input type="text" class="form-control" id="address">
+              </div>              
+              <div class="row" style="padding: 0px">
+                <div class="col-sm-8">
+                  <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="city">
+                  </div>
+                </div>      
+                <div class="col-sm-4" style="margin: -2px">
+                  <div class="form-group">
+                    <label for="state">State:</label>
+                    <select class="form-control" id="state" name="state">
+                      <option value="AK">Alaska</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DC">District of Columbia</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="IA">Iowa</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MD">Maryland</option>
+                      <option value="ME">Maine</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MT">Montana</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NY">New York</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="PR">Puerto Rico</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VA">Virginia</option>
+                      <option value="VT">Vermont</option>
+                      <option value="WA">Washington</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="zip">Zip:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="zip">
+              </div>
+              <div class="form-group">
+                <label for="website">Website Address:</label>
+                <input type="text" class="form-control" id="website">
+              </div>              
+              <div class="form-group">
+                <label for="image">FoodSpot Picture</label>
+                <input type="file" class="form-control-file" id="image" aria-describedby="image_help">
+                <small id="image_help" class="form-text text-muted">This image will be used to represent your FoodSpot for both icons and full pictures.</small> </div>
+              <div class="form-group">
+                <label for="menu_image">Food Menu Picture</label>
+                <input type="file" class="form-control-file" id="menu_image" aria-describedby="menu_help">
+                <small id="menu_help" class="form-text text-muted">This image will be used to represent your Menu</small> 
+              </div>             
+              
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="food_type">FoodSpot Type:</label>
+                <select class="form-control" id="food_type">
+                  <option>American</option>
+                  <option>Latin</option>
+                  <option>Asian</option>
+                  <option>Italian</option>
+                  <option>Indian</option>
+                  <option>Dessert</option>
+                  <option>Other</option>
+                </select>
+              </div>
+                           
+              <!--Monday-->               
+              <div class="form-group">
+                <label class="control-label" for="monday">Monday:</label>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="monday_checkbox" value="option1">
+                  </label>
+                </div>
+                <div class="row" style="margin: 0px; padding: 0px">
+                  <div class="col-sm-6" style="padding: 0px">
+                    <div class="input-group">
+                     <label for="monday_open" style="align-self:flex-end; padding-right: 5px">Open:</label>
+                      <select class="form-control" id="monday_open">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding: 0px">
+                     <div class="input-group">
+                     <label for="monday_open" style="align-self:flex-end; padding-left: 5px; padding-right: 5px">Close:</label>
+                      <select class="form-control" id="monday_close">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+				  </div>
+                </div>
+              </div>              
+              <!--Tuesday-->
+              <div class="form-group">
+                <label class="control-label" for="tuesday_checkbox">Tuesday:</label>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="tuesday_checkbox" value="option1">
+                  </label>
+                </div>
+                <div class="row" style="margin: 0px; padding: 0px">
+                  <div class="col-sm-6" style="padding: 0px">
+                    <div class="input-group">
+                     <label for="tuesday_open" style="align-self:flex-end; padding-right: 5px">Open:</label>
+                      <select class="form-control" id="tuesday_open">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding: 0px">
+                     <div class="input-group">
+                     <label for="tuesday_open" style="align-self:flex-end; padding-left: 5px; padding-right: 5px">Close:</label>
+                      <select class="form-control" id="tuesday_close">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+				  </div>
+                </div>
+              </div>
+              <!--Wednesday-->
+              <div class="form-group">
+                <label class="control-label" for="wednesday">Wednesday:</label>
+                <div class="form-check form-check-inline w">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="wednesday_checkbox" value="option1">
+                  </label>
+                </div>
+                <div class="row" style="margin: 0px; padding: 0px">
+                  <div class="col-sm-6" style="padding: 0px">
+                    <div class="input-group">
+                     <label for="wednesday_open" style="align-self:flex-end; padding-right: 5px">Open:</label>
+                      <select class="form-control" id="wednesday_open">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding: 0px">
+                     <div class="input-group">
+                     <label for="wednesday_open" style="align-self:flex-end; padding-left: 5px; padding-right: 5px">Close:</label>
+                      <select class="form-control" id="wednesday_close">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+				  </div>
+                </div>
+              </div>
+              <!--Thursday-->
+              <div class="form-group">
+                <label class="control-label" for="thursday">Thursday:</label>
+                <div class="form-check form-check-inline w">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="thursday_checkbox" value="option1">
+                  </label>
+                </div>
+                <div class="row" style="margin: 0px; padding: 0px">
+                  <div class="col-sm-6" style="padding: 0px">
+                    <div class="input-group">
+                     <label for="thursday_open" style="align-self:flex-end; padding-right: 5px">Open:</label>
+                      <select class="form-control" id="thursday_open">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding: 0px">
+                     <div class="input-group">
+                     <label for="thursday_open" style="align-self:flex-end; padding-left: 5px; padding-right: 5px">Close:</label>
+                      <select class="form-control" id="thursday_close">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+				  </div>
+                </div>
+              </div>
+              <!--Friday-->
+              <div class="form-group">
+                <label class="control-label" for="friday">Friday:</label>
+                <div class="form-check form-check-inline w">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="friday_checkbox" value="option1">
+                  </label>
+                </div>
+                <div class="row" style="margin: 0px; padding: 0px">
+                  <div class="col-sm-6" style="padding: 0px">
+                    <div class="input-group">
+                     <label for="friday_open" style="align-self:flex-end; padding-right: 5px">Open:</label>
+                      <select class="form-control" id="friday_open">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding: 0px">
+                     <div class="input-group">
+                     <label for="friday_open" style="align-self:flex-end; padding-left: 5px; padding-right: 5px">Close:</label>
+                      <select class="form-control" id="friday_close">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+				  </div>
+                </div>
+              </div>
+              <!--Saturday-->
+              <div class="form-group">
+                <label class="control-label" for="saturday">Saturday:</label>
+                <div class="form-check form-check-inline w">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="saturday_checkbox" value="option1">
+                  </label>
+                </div>
+                <div class="row" style="margin: 0px; padding: 0px">
+                  <div class="col-sm-6" style="padding: 0px">
+                    <div class="input-group">
+                     <label for="saturday_open" style="align-self:flex-end; padding-right: 5px">Open:</label>
+                      <select class="form-control" id="saturday_open">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding: 0px">
+                     <div class="input-group">
+                     <label for="saturday_open" style="align-self:flex-end; padding-left: 5px; padding-right: 5px">Close:</label>
+                      <select class="form-control" id="saturday_close">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+				  </div>
+                </div>
+              </div>	
+              <!--Sunday-->
+              <div class="form-group">
+                <label class="control-label" for="sunday_checkbox">Sunday:</label>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="sunday_checkbox" value="option1">
+                  </label>
+                </div>
+                <div class="row" style="margin: 0px; padding: 0px">
+                  <div class="col-sm-6" style="padding: 0px">
+                    <div class="input-group">
+                     <label for="sunday_open" style="align-self:flex-end; padding-right: 5px">Open:</label>
+                      <select class="form-control" id="sunday_open">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6" style="padding: 0px">
+                     <div class="input-group">
+                     <label for="sunday_open" style="align-self:flex-end; padding-left: 5px; padding-right: 5px">Close:</label>
+                      <select class="form-control" id="sunday_close">
+                        <option>12:00 AM</option>
+                        <option>1:00 AM</option>
+                        <option>2:00 AM</option>
+                        <option>3:00 AM</option>
+                        <option>4:00 AM</option>
+                        <option>5:00 AM</option>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                        <option>7:00 PM</option>
+                        <option>8:00 PM</option>
+                        <option>9:00 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:00 PM</option>
+                        <option>12:00 PM</option>
+                      </select>
+                    </div>
+				  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
+<script src="app.js"></script>
+<script src="save_restaurant.js"></script>
+<script src="daysofweek.js"></script>
+
+<script>  
+	
+
+	//saveRestaurant(mAddress, mFood_type, mDays_Open);  
+  </script>
+</body>
+
+  
+</html>
+
+<!-- <h1 id="bigOne"></h1>
+  	
+	//dbRef.on('value', snap => bigOne.innerText = snap.val()); -->

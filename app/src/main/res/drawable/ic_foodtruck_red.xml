@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="35dp"
+        android:height="35dp"
+        android:viewportHeight="614"
+        android:viewportWidth="614">
+    <group
+        android:name="@string/groupTruckFilter"
+        android:pivotX="0"
+        android:pivotY="0">
+        <path
+            android:name="@string/truck"
+            android:fillColor="@color/foodtruck_color_red"
+            android:pathData="@string/path_foodtruck"
+            android:strokeColor="#000000"
+            android:strokeWidth="2"/>
+    </group>
+</vector>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/fragment_foodspotdetails_scrollview"
+        style="@style/global_app_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/fragment_foodspotdetails_details_image"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:background="@color/fragment_foodspotlist_detail_background"
+                android:elevation="@dimen/card_elevation"
+                android:scaleType="centerCrop"
+                android:transitionName="@string/transition_foodspot_image"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <View
+                android:id="@+id/fragment_foodspotdetails_foodtruckblackalphaview"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/card"
+                android:elevation="@dimen/card_elevation"
+                app:layout_constraintBottom_toBottomOf="@+id/fragment_foodspotdetails_details_image"
+                app:layout_constraintLeft_toLeftOf="@+id/fragment_foodspotdetails_details_image"
+                app:layout_constraintRight_toRightOf="@+id/fragment_foodspotdetails_details_image"/>
+
+            <TextView
+                android:id="@+id/fragment_foodspotdetails_foodtruckname_tv"
+                style="@style/fragment_foodspotdetails_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/card_elevation"
+                app:layout_constraintBottom_toBottomOf="@+id/fragment_foodspotdetails_foodtruckblackalphaview"
+                app:layout_constraintLeft_toLeftOf="@+id/fragment_foodspotdetails_foodtruckblackalphaview"/>
+
+            <!-- Description Sub Card -->
+            <FrameLayout
+                android:id="@+id/fragment_foodspotlist_subcard_description"
+                style="@style/fragment_fooodspotdetails_framelayout_white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_foodspotdetails_details_image">
+
+                <android.support.v7.widget.CardView
+                    style="@style/fragment_foodspotdetails_subcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/card_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/fragment_foodspotdetails_subcard_headers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/heading_description"/>
+
+                        <michael_juarez.foodtrucksandmore.utilities.TextViewEx
+                            android:id="@+id/fragment_foodspotlist_foodtruckdetails_tv"
+                            style="@style/fragment_foodspotdetails_subcard_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            style="@style/fragment_foodspotdetails_subcard_headers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/heading_address"/>
+
+                        <michael_juarez.foodtrucksandmore.utilities.TextViewEx
+                            android:id="@+id/fragment_foodspotdetails_foodtruckaddress_tv"
+                            style="@style/fragment_foodspotdetails_subcard_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            style="@style/fragment_foodspotdetails_subcard_headers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/heading_hours"/>
+
+                        <michael_juarez.foodtrucksandmore.utilities.TextViewEx
+                            android:id="@+id/fragment_foodspotdetails_foodtruckhours_tv"
+                            style="@style/fragment_foodspotdetails_subcard_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+
+                        <TextView
+                            style="@style/fragment_foodspotdetails_subcard_headers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/heading_website"/>
+
+                        <michael_juarez.foodtrucksandmore.utilities.TextViewEx
+                            android:id="@+id/fragment_foodspotdetails_foodtruckwebsite_tv"
+                            style="@style/fragment_foodspotdetails_subcard_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+
+                        <TextView
+                            style="@style/fragment_foodspotdetails_subcard_headers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Menu"/>
+
+                        <ImageView
+                            android:id="@+id/fragment_foodspotdetails_foodtruckmenu_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
