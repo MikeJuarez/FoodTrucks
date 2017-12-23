@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
@@ -23,6 +24,7 @@ import michael_juarez.foodtrucksandmore.data.FoodSpotLatLng;
 import michael_juarez.foodtrucksandmore.data.FoodStyle;
 
 import static android.media.CamcorderProfile.get;
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
 /**
  * Created by user on 11/9/2017.
@@ -94,7 +96,8 @@ public class FoodSpotDb implements DistanceUtility.DistanceUtilityInterface {
 
         DatabaseReference geofireDbRef = sDatabase.getReference("path/to/geofire");
         geoFire = new GeoFire(geofireDbRef);
-        geoQuery = geoFire.queryAtLocation(new GeoLocation(mOriginPoint.getLat(), mOriginPoint.getLng()), 500);
+        geoQuery = geoFire.queryAtLocation(new GeoLocation(mOriginPoint.getLat(), mOriginPoint.getLng()), 25);
+        Log.d(TAG, "mOriginPoint: Lat: " + mOriginPoint.getLat() + ", Long: " + mOriginPoint.getLng());
 
         geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
             private DatabaseReference mFoodTrucksRef = sDatabase.getReference("food_trucks");
@@ -119,8 +122,6 @@ public class FoodSpotDb implements DistanceUtility.DistanceUtilityInterface {
             public void onGeoQueryReady() {
                 //After GeoFire key list is populated, populate FoodSpot list if GeoFire key list matches what's in the database.
                 getFoodSpot(mLocalFoodSpotsKeyList);
-                mFilteredList = mUnfilteredList;
-                updateAdapters();
             }
 
             @Override
@@ -145,6 +146,7 @@ public class FoodSpotDb implements DistanceUtility.DistanceUtilityInterface {
                             mFoodTrucksRef.removeEventListener(this);
 
                             if (keyListSize == mUnfilteredList.size()) {
+                                mFilteredList = mUnfilteredList;
                                 setupDistanceUtility(context);
                             }
                         }
@@ -185,6 +187,7 @@ public class FoodSpotDb implements DistanceUtility.DistanceUtilityInterface {
             mDistanceUtility.stopTask();
     }
 
+    //Called after Distance is done calculating
     @Override
     public void updateAdapters() {
         mFoodSpotDbInterface.updateAdapters(mFilteredList, true);

@@ -24,7 +24,7 @@ function init() {
 	"use strict";
 	
 var config = {	
-    apiKey: "ENTER_API_KEY_HERE",
+    apiKey: "AIzaSyDxF17BhW1gjKXUxobFZqgo2rDQ7u_rb0c",
     authDomain: "foodtrucksandmore.firebaseapp.com",
     databaseURL: "https://foodtrucksandmore.firebaseio.com",
     projectId: "foodtrucksandmore",

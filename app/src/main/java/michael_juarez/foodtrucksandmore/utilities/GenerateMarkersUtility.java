@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -23,8 +24,10 @@ import michael_juarez.foodtrucksandmore.R;
 import michael_juarez.foodtrucksandmore.data.FoodSpot;
 import michael_juarez.foodtrucksandmore.data.FoodSpotLatLng;
 
+import static android.R.attr.padding;
 import static android.R.attr.width;
 import static android.R.string.cancel;
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
 /**
  * Created by user on 11/25/2017.
@@ -40,11 +43,14 @@ public class GenerateMarkersUtility implements Runnable{
     private Runnable mRunnable;
     private Handler mHandler;
     private Marker mOriginPointMarker;
+    private int[] mCardMeasuredWidth;
 
-    public GenerateMarkersUtility(GoogleMap map, FoodSpotLatLng originPoint, CardView mapContainer, Activity activity, ArrayList<FoodSpot> foodSpotList) {
+    //public GenerateMarkersUtility(GoogleMap map, FoodSpotLatLng originPoint, CardView mapContainer, Activity activity, ArrayList<FoodSpot> foodSpotList) {
+    public GenerateMarkersUtility(GoogleMap map, FoodSpotLatLng originPoint, int[] cardMeasuredWidth, Activity activity, ArrayList<FoodSpot> foodSpotList) {
         mMap = map;
         mOriginPoint = originPoint;
-        mCardDetailsView = mapContainer;
+        //mCardDetailsView = mapContainer;
+        mCardMeasuredWidth = cardMeasuredWidth;
         mActivity = activity;
         mFoodSpotList = foodSpotList;
 
@@ -90,7 +96,7 @@ public class GenerateMarkersUtility implements Runnable{
                         fsLongitude = fs.getLng();
 
                     } catch (Exception e) {
-                        Toast.makeText(mActivity, "Error Loading Markers", Toast.LENGTH_LONG);
+                        Toast.makeText(mActivity, "Error Loading Markers", Toast.LENGTH_LONG).show();
                     }
                     Marker fsMarker = mMap.addMarker(new MarkerOptions()
                             .position(new LatLng(fsLatitude, fsLongitude))
@@ -105,9 +111,14 @@ public class GenerateMarkersUtility implements Runnable{
                     builder.include(marker.getPosition());
                 }
                 LatLngBounds bounds = builder.build();
-                int width = mCardDetailsView.getMeasuredWidth();
+                /*int width = mCardDetailsView.getMeasuredWidth();
                 int height = mCardDetailsView.getMeasuredHeight();
-                int padding = (int) (height * 0.10);
+                int padding = (int) (height * 0.10);*/
+
+                int width = mCardMeasuredWidth[0];
+                int height = mCardMeasuredWidth[1];
+                int padding = mCardMeasuredWidth[2];
+
                 CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, width, height, padding);
                 mMap.animateCamera(cu);
             }
@@ -121,11 +132,14 @@ public class GenerateMarkersUtility implements Runnable{
         mMap.clear();
         mMarkerList.clear();
         mFoodSpotList = updatedList;
-        run();
+        mRunnable.run();
     }
 
     public void cancelTask(){
         mHandler.removeCallbacks(mRunnable);
+        if (mRunnable != null)
+            mRunnable = null;
+
     }
 
 }

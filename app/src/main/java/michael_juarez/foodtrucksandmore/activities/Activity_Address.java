@@ -16,4 +16,8 @@ public class Activity_Address extends Activity_SingleFragmentActivity{
     protected Fragment createFragment(Bundle savedInstanceState) {
         return new Fragment_Address();
     }
+
+    @Override
+    protected void setupToolbar() {
+    }
 }

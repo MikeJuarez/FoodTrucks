@@ -10,9 +10,24 @@
     <string name="reverse_geocoding_pre">https://maps.googleapis.com/maps/api/geocode/json?address=</string>
     <string name="distance_matrix_pre">https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial</string>
     <string name="distance_matrix_tail">key=</string>
+    <string name="api_key">AIzaSyCC4_9U_rU9oprUFpqPp9C9RbjuB8oAHsk</string>
 
     <!-- Menu Strings -->
+    <string name="menu">Menu</string>
     <string name="menu_favorite">Favorite</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_gridview">Grid View</string>
+    <string name="menu_filter">Food Style Filter</string>
+
+
+    <!-- Days of Week -->
+    <string name="monday">Monday:</string>
+    <string name="tuesday">Tuesday:</string>
+    <string name="wednesday">Wednesday:</string>
+    <string name="thursday">Thursday:</string>
+    <string name="friday">Friday:</string>
+    <string name="saturday">Saturday:</string>
+    <string name="sunday">Sunday:</string>
 
     <!-- Marker String -->
     <string name="point_of_interest">FoodSpot Point Of Interest</string>
@@ -28,12 +43,22 @@
     <string name="groupFilterTruck">groupFilterTruck</string>
     <string name="groupTruckFilter">groupFilterTruck</string>
 
-
     <!-- Error Message -->
     <string name="error_retrieving_address">Sorry, there was an error retrieving the address.</string>
     <string name="error_empty_address">Please re-enter the address.</string>
     <string name="error_blank_address">Address field is blank, please enter an address!</string>
     <string name="error_current_location">There was an error retrieving your location, please try again.</string>
+    <string name="error_load_asynchdata">Failed to asynchronously load data.</string>
+    <string name="error_pre_adding_favorite">There was an error adding\u0020</string>
+    <string name="error_post_adding_favorite">\u0020to your Favorites List.</string>
+    <string name="error_pre_removing_favorite">There was an error removing\u0020</string>
+    <string name="error_post_removing_favorite">"\u0020 from your Favorites List.</string>
+    <string name="error_no_origin_point">App doesn\'t have origin point.</string>
+    <string name="error_no_favorite_foodspots">"You have not saved any favorite FoodSpots."</string>
+    <string name="error_location">Sorry there was an error getting your current location.</string>
+    <string name="error_enable_location_perm">Please enable location settings for this app to use this feature.</string>
+    <string name="error_retrieving_list">There are no Food Trucks in your area, or there was an error retrieving list.</string>
+
 
     <!-- Fragment_FoodSpotDetails -->
     <string name="heading_description">Description:"</string>
@@ -41,6 +66,26 @@
     <string name="heading_hours">Hours:</string>
     <string name="heading_menu">Menu:</string>
     <string name="heading_website">Website:</string>
+
+    <!-- Toast Messages -->
+    <string name="success_add_favorite"> was succesfully added to your Favorites List.</string>
+    <string name="success_remove_favorite">"\u0020was succesfully removed from your Favorites List</string>
+
+    <!-- FoodStyles -->
+    <string name="All">All</string>
+    <string name="American">American</string>
+    <string name="Latin">Latin</string>
+    <string name="Asian">Asian</string>
+    <string name="Italian">Italian</string>
+    <string name="Indian">Indian</string>
+    <string name="Dessert">Dessert</string>
+    <string name="Other">Other</string>
+
+    <string name="currentlocation">Current Location</string>
+    <string name="map">Map</string>
+    <string name="contentdescription_foodname_header">FoodStyle Name Header</string>
+    <string name="contentdescription_foodtruck_image">Food Truck Image</string>
+    <string name="contentdescription_foodtruck_name">Food Truck Name</string>
 
 </resources>
 

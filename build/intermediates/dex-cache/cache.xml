@@ -3,24 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.8.1\bc373fb6bc7bca3035041b924f158fd2b946ee8d\butterknife-annotations-8.8.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.8.1_93faf0020ffbfe6dc8aba68c325569cddbb00991.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\23825a106a0d85cbb00ce0fa22363d15e533d657\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_a5d6580c628ed9e80ede5a985350b268260747eb.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\4.3.1\9afb77c8712b19e421caecefe8e85e98ab327ce7\glide-4.3.1.jar"
         jumboMode="false"
         optimize="true"
@@ -45,15 +27,6 @@
         revision="26.0.1"
         sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
         <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_7470f5be54e25a188739e5e31d73d0062c751711.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.9.0\1b6c10b5120995a7542c1a31b7828fb8593c8ba\okhttp-3.9.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="01b6c10b5120995a7542c1a31b7828fb8593c8ba">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\okhttp-3.9.0_85782bf11d4d11d10ca1cc48fa36a589d1a63463.jar" />
     </item>
     <item
         is-multidex="false"
@@ -90,24 +63,6 @@
         revision="26.0.1"
         sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
         <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_5dd75fbff1d3661fcbb9a2e43feca76f01d1f0ae.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\354959c0452176f8d937c5c9e0c2807532c770da\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a0b869be21f2e39e9b337bec395d9a7e111da21e">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_88dc9b8b3f4f4c67413822e5ee0643e213d597a6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\fa9703509ed94186668b252d135b951405816e21\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="fd6ae8c61bd548b134265ef3c37807d4efcc854c">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_f553c13deb4aacc78a5bdcca121ad13a9b54d590.jar" />
     </item>
     <item
         is-multidex="true"
@@ -155,6 +110,15 @@
         <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_192b0b6f15941048075d78100bcfec01c7d5b8e6.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\b07582f6de545ffe9071b0765390645be8c4df79\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ed04a0ae7198b0d5d0e965d6afdb0fe784dcfbee">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7484a9d701d8f032a1334b8113f26c2ed0f303d8\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\user\.android\build-cache\ba12567615a5530af94613310c267063c23227a7\output\jars\classes.jar"
         jumboMode="false"
@@ -162,6 +126,168 @@
         revision="26.0.1"
         sha1="225f093d9a041f8206d812d3055a886a816ac365">
         <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_9d10b143f4a7fa274be51f3645056477fc61b1e1.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\b618e1a6cc2352ec95b0c824e9bfb0c01f254547\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5ad3911825107d8dd4b017fdecebfd23c08048dd">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_470a4609f1492dafc8fcb0dce10ac5be9eec42de\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\5b56bb4912964e138d797422d9aba2a77b751d87\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="122de0d704f76d2bb5cb9db66e00fe90a0a41e78">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_960871fc09006706df0de85e97dc21a5e1648be8\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\okio-1.13.0_0169382f78f78cdcb30d2b4caf72cdf4fc2dca2e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\f0898e387451abde082af6944177b414b4b98832\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="38ceaeb22ef95d1a0d320ecdad9be7383d6b7923">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3adb30b23f625f9a655712e9b0873b6dacd308c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\934040abe063c8e3347ba93ecd877746fa1b7fc6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="264ad23f9752aabecfa41115c52a25a023a08839">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2f81e276fc5ed4aa1f74582b949f87d3e6e240d3\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\74f12dff621e37f49ccb4a623f56e839b41eebd9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_9e3dea2fe67e74cac2cf429fabb57638be64f526.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\common-1.0.0_bc20fbaec4cd9fc4325f910efac280a5001099a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\common-1.0.0_f5dabd6ff47c48b3856c1de9aa6d6879f45ae90d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\9c6e344149c7a7911eebffcfd8a09bfc15553ef7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_ba74906d3fd1a7772f007a11503f91e71cd6f84c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\564d5ccc7db67407a448bbb72e8488aa8ba896e4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a298f4b67b4898200c47cfd4f5bf2f221c657766">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_7ef8f30d3927a9ed199d76a3d77e76c0f7050839.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\084e926cc6d42d66004e16173c920e6f4801b10f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1eb02c1033c29e736e558db646bbf0d522fecb53">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_299b61952d43fe2f799afab164b35562cf41688d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.8.1\bc373fb6bc7bca3035041b924f158fd2b946ee8d\butterknife-annotations-8.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.8.1_93faf0020ffbfe6dc8aba68c325569cddbb00991.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\23825a106a0d85cbb00ce0fa22363d15e533d657\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_a5d6580c628ed9e80ede5a985350b268260747eb.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\ad35bd9fb366f232087194fd78c2724f9e1df8a7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="601ebd8fa027a3dad924ffa1cb14689ced5aa436">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_26e5c7b98061079f9e292c89913d4453d11a8eba\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.9.0\1b6c10b5120995a7542c1a31b7828fb8593c8ba\okhttp-3.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="01b6c10b5120995a7542c1a31b7828fb8593c8ba">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\okhttp-3.9.0_85782bf11d4d11d10ca1cc48fa36a589d1a63463.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\66e7a0bb9f371cef5ab813f6a37b18775162021f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f0f484b1a18c1676984dfea4e572ceffda2f3b78">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_bb52203b5ea76994e450687557348d12d75efabb\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\354959c0452176f8d937c5c9e0c2807532c770da\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a0b869be21f2e39e9b337bec395d9a7e111da21e">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_88dc9b8b3f4f4c67413822e5ee0643e213d597a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\user\.android\build-cache\fa9703509ed94186668b252d135b951405816e21\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fd6ae8c61bd548b134265ef3c37807d4efcc854c">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_f553c13deb4aacc78a5bdcca121ad13a9b54d590.jar" />
     </item>
     <item
         is-multidex="false"
@@ -228,15 +354,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\okio-1.13.0_0169382f78f78cdcb30d2b4caf72cdf4fc2dca2e.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\user\.android\build-cache\a5b7bf0c89061e11f153aec79e1ec757ddab9c3a\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -272,13 +389,31 @@
         <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_f255ad6e95ea5e061b4996c3bfcab2a2b59628ce.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\74f12dff621e37f49ccb4a623f56e839b41eebd9\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\0f7faa2a3b0a01937e5699f19545c4d2ac792e31\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_9e3dea2fe67e74cac2cf429fabb57638be64f526.jar" />
+        sha1="42c9659c973e311ffdb645ed057e5053e0ab5c78">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ea10f3659df71e963fbc006296f2e69e6c68b9df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\ac4e8010f0b30bfc2875f1540a26edcae9b7f6f8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d2af2ef4d987d753f2e8ee2d1480ab964d5c7273">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e237e8a0b62576c54a9f348ef30d5d0227b04441\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\ccb8abb13a41e7dd2932f3f39ed4fa50d9fc2900\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1b982cc8b5ab6f788690238dbe3ac3bb19f88b1a">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a891eaca681b582d7e983edf8ba57b205f1407b5\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -299,40 +434,13 @@
         <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\annotations-4.3.1_9b9ed0bc83f2792845f5b30a722f64d81dda2f18.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\75e9c88c380280ff2e61674ee4801762047afce2\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\common-1.0.0_bc20fbaec4cd9fc4325f910efac280a5001099a1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\common-1.0.0_f5dabd6ff47c48b3856c1de9aa6d6879f45ae90d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\9c6e344149c7a7911eebffcfd8a09bfc15553ef7\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_ba74906d3fd1a7772f007a11503f91e71cd6f84c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\564d5ccc7db67407a448bbb72e8488aa8ba896e4\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a298f4b67b4898200c47cfd4f5bf2f221c657766">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_7ef8f30d3927a9ed199d76a3d77e76c0f7050839.jar" />
+        sha1="e6aeff19a2ce1eb896557be73cb9ceb56f8d1cf3">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2f5ba805fb283c78e950de00e7b0a30edee066e5\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -358,17 +466,17 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="3aa54bdf2b40ddf4ab55042dcc1dbb7dc0624090">
+        sha1="738d03797203e428edf6fc91bc0d858ff61b7d2a">
         <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_29351df90749b5cddca574911d3ba083a735e2aa\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\user\.android\build-cache\084e926cc6d42d66004e16173c920e6f4801b10f\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\user\.android\build-cache\088e5dba1765f49ecbea4d857acd018863b7b5e3\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="1eb02c1033c29e736e558db646bbf0d522fecb53">
-        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\pre-dexed\debug\classes_299b61952d43fe2f799afab164b35562cf41688d.jar" />
+        sha1="233d88c6f961d2a84758dfe27b7af61318190c7b">
+        <dex dex="C:\AndroidStudioProjects\Nanodegree\FoodTrucksAndMore\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_afaf09ce9c65b65e95ad087dd7935861f59f14e5\classes.dex" />
     </item>
 
 </items>

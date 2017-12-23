@@ -12,7 +12,11 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -36,6 +40,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import michael_juarez.foodtrucksandmore.R;
+import michael_juarez.foodtrucksandmore.activities.Activity_Address;
 import michael_juarez.foodtrucksandmore.activities.Activity_FoodSpotDetails;
 import michael_juarez.foodtrucksandmore.activities.Activity_FoodSpotListGridView;
 import michael_juarez.foodtrucksandmore.adapters.FoodSpotAdapter;
@@ -49,6 +54,7 @@ import michael_juarez.foodtrucksandmore.utilities.FoodSpotDb;
 import michael_juarez.foodtrucksandmore.utilities.FoodStyleDb;
 import michael_juarez.foodtrucksandmore.utilities.GenerateMarkersUtility;
 
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 import static michael_juarez.foodtrucksandmore.R.id.map;
 
 
@@ -58,8 +64,9 @@ import static michael_juarez.foodtrucksandmore.R.id.map;
 
 public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSpotDbInterface, FoodSpotAdapter.ListItemClickListener, OnMapReadyCallback, CurrentLocationUtility.UpdateCurrentLocationInterface {
     public static final String KEY_COORDINATES = "Fragment_FoodSpotList.KEY_COORDINATES";
+
     private static final String KEY_STATE_FAVORITE_CLICKED = "Fragment_FoodSpotList.KEY_STATE_FAVORITE_CLICKED";
-    private static final String KEY_STATE_ORIGIN_POINT = "Fragment_FoodSpotList.KEY_STATE_ORIGIN_POINT";
+    private static final String KEY_STATE_FOODSPOT_LIST = "Fragment_FoodSpotList.KEY_STATE_FOODSPOT_LIST";
 
     private Unbinder unbinder;
 
@@ -70,9 +77,7 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     private GridLayoutManager mFoodSpotGridLayoutManager;
 
     private ArrayList<FoodSpot> mFoodSpotList;
-    private List<Marker> mMarkerList;
     private ArrayList<FoodStyle> mFoodStyleList;
-    private ArrayList<FoodSpot> favoritesList;
 
     private FoodSpotDb mFoodSpotData;
     private FoodStyleDb mFoodStyleData;
@@ -82,15 +87,11 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     private FoodSpotLatLng mOriginPoint;
     private GenerateMarkersUtility gmu;
 
-
     @BindView(R.id.fragment_foodspotlist_foodspot_rv)
     RecyclerView mRecyclerView;
 
     @BindView(R.id.fragment_foodspotlist_styles_rv)
     RecyclerView mStylesRecylerView;
-
-    @BindView(R.id.details_view)
-    CardView mCardDetailsView;
 
     @BindView(R.id.fragment_foodspotlist_grid_button)
     ImageView mGridViewButton;
@@ -98,6 +99,8 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     @BindView(R.id.fragment_foodspotlist_favorite)
     ImageView mFavoriteButton;
 
+    @BindView(R.id.details_view)
+    CardView mCardDetailsView;
 
     private Guideline mGuidelineVertical50;
 
@@ -107,6 +110,7 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     private AnimatedVectorDrawable filterToTruck;
     private boolean truck = true;
     private boolean mFavoritesClicked;
+    private int[] mCardMeasuredWidth;
 
     private SupportMapFragment mapFragment;
 
@@ -115,6 +119,7 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -126,25 +131,23 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
         //Used to check for landscape orientation
         mGuidelineVertical50 = view.findViewById(R.id.guidelineVertical50);
 
-        //Holds a list of LatLng points for Markers
-        mMarkerList = new ArrayList();
         addressArr = getArguments().getStringArray(KEY_COORDINATES);
-
-        // Check if Favorites Button was clicked to ensure Favorite list is loaded
-        // This usually returns true when orientation changes
-        if (savedInstanceState != null)
-            mFavoritesClicked = savedInstanceState.getBoolean(KEY_STATE_FAVORITE_CLICKED);
-
         if (addressArr != null)
             mOriginPoint = new FoodSpotLatLng(Double.parseDouble(addressArr[0]), Double.parseDouble(addressArr[1]));
         else
-            Toast.makeText(getActivity(), "App doesn't have origin point", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.error_no_origin_point), Toast.LENGTH_LONG).show();
 
-        mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(map);
-        mapFragment.getMapAsync(this);
+        // Check if Favorites Button was clicked to ensure Favorite list is loaded
+        // This usually returns != null when orientation changes
+        if (savedInstanceState != null) {
+            mFavoritesClicked = savedInstanceState.getBoolean(KEY_STATE_FAVORITE_CLICKED);
+            mFoodSpotList = (ArrayList<FoodSpot>) savedInstanceState.getSerializable(KEY_STATE_FOODSPOT_LIST);
+        }
 
+        //Prepare FoodSpot List Utility
         mFoodSpotData = FoodSpotDb.getInstance(mOriginPoint, this);
 
+        //FoodStyle Filter
         mFoodStyleData = FoodStyleDb.getInstance();
         mFoodStyleList = mFoodStyleData.getFoodStyleList();
 
@@ -156,11 +159,9 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
         //Else Try to load full list without reading from the network database
         if (mFavoritesClicked)
             setFavoritesView(true, true);
-        else
-            mFoodSpotList = mFoodSpotData.getFilteredList(false);
 
         //If this is first time, then do network call to get full list from network database
-        //Else just set up the recyclerview with either favorite list or existing full list
+        //Else just set up the recyclerview with either favorite list or existing list
         if (mFoodSpotList == null && !mFavoritesClicked)
             mFoodSpotData.readFromDB(getActivity());
         else
@@ -173,12 +174,18 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     }
 
     private void setupFoodSpotRecyclerView(boolean animateList) {
-        mFoodSpotAdapter = new FoodSpotAdapter(mFoodSpotList, getActivity(), this, animateList);
+        //Ready to initialize the Map and it's markers.
+        mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(map);
+        mapFragment.getMapAsync(this);
 
-        if (mGuidelineVertical50 == null)
+        if (mGuidelineVertical50 == null) {
+            mFoodSpotAdapter = new FoodSpotAdapter(mFoodSpotList, getActivity(), this, animateList,true, true);
             mFoodSpotGridLayoutManager = new GridLayoutManager(getActivity(), 1, GridLayoutManager.HORIZONTAL, false);
-        else
+        }
+        else {
+            mFoodSpotAdapter = new FoodSpotAdapter(mFoodSpotList, getActivity(), this, animateList,false, true);
             mFoodSpotGridLayoutManager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.VERTICAL, false);
+        }
 
         mRecyclerView.setAdapter(mFoodSpotAdapter);
         mRecyclerView.setLayoutManager(mFoodSpotGridLayoutManager);
@@ -218,12 +225,21 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     //Interface callback method from FoodSpotDb
     @Override
     public void updateAdapters(ArrayList<FoodSpot> filteredFoodSpotList, boolean animateList) {
-        //Threads are finished running, list is safe to pull
-        mFoodSpotList = filteredFoodSpotList;
+        if (mFavoritesClicked && (filteredFoodSpotList == null || filteredFoodSpotList.isEmpty())) {
+            Log.d(TAG, getActivity().getResources().getString(R.string.error_no_favorite_foodspots));
+            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.error_no_favorite_foodspots), Toast.LENGTH_LONG).show();
+            return;
+        }
 
-        //Set up UI
-        if (mMap != null)
-            generateMarkers();
+        //Threads are finished running, list is safe to pull
+        if (filteredFoodSpotList == null || filteredFoodSpotList.isEmpty()) {
+            Log.d(TAG, getActivity().getResources().getString(R.string.error_retrieving_list));
+            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.error_retrieving_list), Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getActivity(), Activity_Address.class);
+            startActivity(intent);
+        }
+
+        mFoodSpotList = filteredFoodSpotList;
 
         setupFoodSpotRecyclerView(animateList);
     }
@@ -244,15 +260,26 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
         mMap = googleMap;
-        mMap.getUiSettings().setZoomControlsEnabled(true);
+
+
+        int width = mCardDetailsView.getMeasuredWidth();
+        int height = mCardDetailsView.getMeasuredHeight();
+        int padding = (int) (height * 0.10);
+
+        mCardMeasuredWidth = new int[3];
+        mCardMeasuredWidth[0] = width;
+        mCardMeasuredWidth[1] = height;
+        mCardMeasuredWidth[2] = padding;
 
         if (mFoodSpotList != null)
             generateMarkers();
     }
 
     private void generateMarkers() {
-        gmu = new GenerateMarkersUtility(mMap, mOriginPoint, mCardDetailsView, getActivity(), mFoodSpotList);
+        //gmu = new GenerateMarkersUtility(mMap, mOriginPoint, mCardDetailsView, getActivity(), mFoodSpotList);
+        gmu = new GenerateMarkersUtility(mMap, mOriginPoint, mCardMeasuredWidth, getActivity(), mFoodSpotList);
         gmu.getMarkerList();
     }
 
@@ -264,9 +291,8 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     }
 
     private void updateMarkerList() {
-        if (gmu == null)
-            gmu = new GenerateMarkersUtility(mMap, mOriginPoint, mCardDetailsView, getActivity(), mFoodSpotList);
-
+        //gmu = new GenerateMarkersUtility(mMap, mOriginPoint, mCardDetailsView, getActivity(), mFoodSpotList);
+        gmu = new GenerateMarkersUtility(mMap, mOriginPoint, mCardMeasuredWidth, getActivity(), mFoodSpotList);
         gmu.updateMarkerList(mFoodSpotList);
     }
 
@@ -283,9 +309,8 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
             updateAdapters(mFoodSpotList, animateList);
             updateMarkerList();
             mFavoriteButton.setImageResource(R.drawable.ic_favorite_checked);
-        }
-        else {
-            Toast.makeText(getActivity(), "You have not saved any favorite FoodSpots.", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.error_no_favorite_foodspots), Toast.LENGTH_LONG).show();
             mFavoritesClicked = !mFavoritesClicked;
             mFavoriteButton.setImageResource(R.drawable.ic_favorite_unchecked);
             updateAdapters(mFoodSpotData.getFilteredList(false), animateList);
@@ -298,7 +323,7 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     public void updateCurrentLocation(Location location) {
         mOriginPoint = new FoodSpotLatLng(location.getLatitude(), location.getLongitude());
 
-        if (gmu != null) {
+        if (gmu != null && mMap != null) {
             gmu.updateOriginMaker(mOriginPoint);
 
             CameraUpdate center =
@@ -310,6 +335,27 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
         }
     }
 
+    @Override
+    public void onCreateOptionsMenu(final Menu menu, final MenuInflater menuInflater) {
+        menuInflater.inflate(R.menu.foodspotlist_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.foodspotlist_menu_favorites:
+                clickFavorite();
+                break;
+            case R.id.foodspotlist_menu_gridview:
+                gridOnClick();
+                break;
+            case R.id.foodspotlist_menu_filter:
+                filterOnClick();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @OnClick(R.id.fragment_foodspotlist_favorite)
     public void clickFavorite() {
@@ -317,13 +363,13 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
 
         if (mFavoritesClicked)
             setFavoritesView(true, true);
-         else
+        else
             setFavoritesView(false, true);
     }
 
     @OnClick(R.id.fragment_foodspotlist_map_currentlocation_button)
     public void mapCurrentLocationButtonClick() {
-        CurrentLocationUtility currentLocationUtility = CurrentLocationUtility.getInstance(getActivity(), this);
+        CurrentLocationUtility currentLocationUtility = new CurrentLocationUtility(getActivity(), this);
         currentLocationUtility.getLocation();
     }
 
@@ -344,7 +390,6 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
 
             Animation animation2 = AnimationUtils.loadAnimation(getActivity(), R.anim.slide_in_left);
             mStylesRecylerView.startAnimation(animation2);
-
 
             animation.setAnimationListener(new Animation.AnimationListener() {
                 @Override
@@ -432,6 +477,7 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
     public void onSaveInstanceState(Bundle outstate) {
         super.onSaveInstanceState(outstate);
         outstate.putBoolean(KEY_STATE_FAVORITE_CLICKED, mFavoritesClicked);
+        outstate.putSerializable(KEY_STATE_FOODSPOT_LIST, mFoodSpotList);
     }
 
     @Override
@@ -460,6 +506,5 @@ public class Fragment_FoodSpotList extends Fragment implements FoodSpotDb.FoodSp
         if (mFoodSpotData != null)
             mFoodSpotData.stopTask();
     }
-
 }
 

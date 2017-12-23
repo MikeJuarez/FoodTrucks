@@ -60,12 +60,4 @@
             android:text="@string/fragment_address_showmebutton"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/fragment_address_ownbus_button"
-        style="@style/fragment_address_ownbusiness"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:text="@string/fragment_address_ownfoodbus"/>
-
 </FrameLayout>

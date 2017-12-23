@@ -1,0 +1,119 @@
+{
+  "food_trucks" : {
+    "-KzS0DBQOWZD3v55aeaf" : {
+      "address" : "6603 s dixie hwy",
+      "city" : "miami",
+      "close_time" : [ "12:00 AM", "12:00 AM", "12:00 AM", "12:00 AM", "2:00 AM", "2:00 AM", "12:00 AM" ],
+      "description" : "No Description",
+      "email" : "@email.com",
+      "food_type" : "Latin",
+      "image_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/foodspot_images%2F-KzS0DBQOWZD3v55aeaf?alt=media&token=0969bda9-0163-4319-aeb2-d2dc3fd759b9",
+      "lat" : 25.694451,
+      "lng" : -80.3005064,
+      "menu_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/menu_images%2F-KzS0DBQOWZD3v55aeaf?alt=media&token=eaee7ff6-7f5d-4acf-8d09-7d5b6c713363",
+      "name" : "El Toro Loco Churrascaria",
+      "open_time" : [ "7:00 AM", "7:00 AM", "7:00 AM", "7:00 AM", "7:00 AM", "7:00 AM", "7:00 AM" ],
+      "state" : "FL",
+      "website" : "http://eltorolocochurrascaria.com",
+      "zip" : "33143"
+    },
+    "-KzS39hsNmz-8KKDI23G" : {
+      "address" : "7418 Biscayne Blvd Miami, Florida",
+      "city" : "Miami",
+      "close_time" : [ "11:00 PM", "11:00 PM", "11:00 PM", "11:00 PM", "11:00 PM", "11:00 PM", "11:00 PM" ],
+      "description" : "Ms. Cheezious®, voted Best Food Truck in Miami, rolls out your favorite comfort food – grilled cheese sandwiches like mom used to make, only not quite as innocent as mom used to make! Visit us at our brick and mortar location in historic MIMO District at 7418 Biscayne Boulevard, Miami, Fl 33138 or our Coral Gables brick and mortar location opening April 2016 at 1915 Ponce De Leon Blvd, Coral Gables, Fl 33134 or Find our food trucks on our events calendar.",
+      "email" : "@email.com",
+      "food_type" : "American",
+      "image_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/foodspot_images%2F-KzS39hsNmz-8KKDI23G?alt=media&token=0f1e3b0b-b809-426c-9535-a06fe15f5275",
+      "lat" : 25.8434507,
+      "lng" : -80.1845969,
+      "menu_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/menu_images%2F-KzS39hsNmz-8KKDI23G?alt=media&token=e7c75253-aa44-456e-a172-1d39f322a742",
+      "name" : "Ms. Cheezious",
+      "open_time" : [ "11:00 AM", "11:00 AM", "11:00 AM", "11:00 AM", "11:00 AM", "11:00 AM", "11:00 AM" ],
+      "state" : "FL",
+      "website" : "http://mscheezious.com",
+      "zip" : "33138"
+    },
+    "-Kzf2OW-xr9eW6T9EDpJ" : {
+      "address" : "13205 sw 137 av",
+      "city" : "miami",
+      "close_time" : [ "3:00 AM", "3:00 AM", "3:00 AM", "3:00 AM", "3:00 PM", "3:00 PM", "3:00 AM" ],
+      "description" : "Q'Sabroso Fast Food is a trailer on the Miami streets serving Cachapas, Patacones, Pepitos, Arepas, Burgers, Hot dogs, Pernil, Lomito, Pollo, and more! If you're hungry late at night, stop by and get a sabroso bite!",
+      "email" : "@qsabrosofastfood@hotmail.com",
+      "food_type" : "Latin",
+      "image_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/foodspot_images%2F-Kzf2OW-xr9eW6T9EDpJ?alt=media&token=7e285f53-2b28-457e-9906-85cfff4aaeb4",
+      "lat" : 25.6441671,
+      "lng" : -80.4144819,
+      "menu_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/menu_images%2F-Kzf2OW-xr9eW6T9EDpJ?alt=media&token=1f2e4123-4522-4a8c-8c91-4ba30de64514",
+      "name" : "Q'Sabroso",
+      "open_time" : [ "4:00 PM", "4:00 PM", "4:00 PM", "4:00 PM", "4:00 PM", "4:00 PM", "4:00 PM" ],
+      "state" : "FL",
+      "website" : "https://www.grubhub.com/restaurant/Q'-Sabroso-Fast-Food-13205-SW-137th-Ave-Miami/307760",
+      "zip" : "33186"
+    },
+    "-KzgvqfpsaBeVUGEkOsl" : {
+      "address" : "9790 SW 40th St",
+      "city" : "Miami",
+      "close_time" : [ "10:00 PM", "10:00 AM", "10:00 AM", "10:00 AM", "12:00 AM", "2:00 AM", "2:00 AM" ],
+      "description" : "No Description.",
+      "email" : "@email.com",
+      "food_type" : "Other",
+      "image_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/foodspot_images%2F-KzgvqfpsaBeVUGEkOsl?alt=media&token=1f04a02f-6ffe-462a-8866-5b405af75673",
+      "lat" : 25.7321632,
+      "lng" : -80.3531505,
+      "menu_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/menu_images%2F-KzgvqfpsaBeVUGEkOsl?alt=media&token=88fc6d46-65b2-4340-9e16-0ac7367aafcf",
+      "name" : "Arabian Knife",
+      "open_time" : [ "12:00 PM", "12:00 PM", "12:00 PM", "12:00 PM", "12:00 PM", "12:00 PM", "12:00 AM" ],
+      "state" : "FL",
+      "website" : "http://websitemkt.com/arabianknife",
+      "zip" : "33165"
+    },
+    "-L0P5enWI6KBeBQMqpGR" : {
+      "address" : " 15680 SW 88 ST",
+      "city" : "Miami",
+      "close_time" : [ "1:00 PM", "1:00 AM", "1:00 AM", "1:00 AM", "2:00 AM", "3:00 AM", "1:00 PM" ],
+      "email" : "@email.com",
+      "food_type" : "Latin",
+      "image_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/foodspot_images%2F-L0P5enWI6KBeBQMqpGR?alt=media&token=fe426277-02b7-4f5d-9c1a-41c835688660",
+      "lat" : 25.6839346,
+      "lng" : -80.444937,
+      "menu_location" : "https://firebasestorage.googleapis.com/v0/b/foodtrucksandmore.appspot.com/o/menu_images%2F-L0P5enWI6KBeBQMqpGR?alt=media&token=9f8e9c47-b13b-4973-ba23-5a40389428c6",
+      "name" : "El Punto Peruano",
+      "open_time" : [ "7:00 AM", "7:00 AM", "7:00 AM", "7:00 AM", "7:00 PM", "7:00 PM", "5:00 PM" ],
+      "state" : "FL",
+      "website" : "https://instagram.com/elpuntoperuano",
+      "zip" : "33196"
+    }
+  },
+  "path" : {
+    "to" : {
+      "geofire" : {
+        "-KzS0DBQOWZD3v55aeaf" : {
+          ".priority" : "dhwfhtwcn8",
+          "g" : "dhwfhtwcn8",
+          "l" : [ 25.694451, -80.3005064 ]
+        },
+        "-KzS39hsNmz-8KKDI23G" : {
+          ".priority" : "dhwgp2em52",
+          "g" : "dhwgp2em52",
+          "l" : [ 25.8434507, -80.1845969 ]
+        },
+        "-Kzf2OW-xr9eW6T9EDpJ" : {
+          ".priority" : "dhwcfh7ung",
+          "g" : "dhwcfh7ung",
+          "l" : [ 25.6441671, -80.4144819 ]
+        },
+        "-KzgvqfpsaBeVUGEkOsl" : {
+          ".priority" : "dhwf7s2sey",
+          "g" : "dhwf7s2sey",
+          "l" : [ 25.7321632, -80.3531505 ]
+        },
+        "-L0P5enWI6KBeBQMqpGR" : {
+          ".priority" : "dhwf17tgc0",
+          "g" : "dhwf17tgc0",
+          "l" : [ 25.6839346, -80.444937 ]
+        }
+      }
+    }
+  }
+}

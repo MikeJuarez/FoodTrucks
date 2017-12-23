@@ -1,6 +1,7 @@
 package michael_juarez.foodtrucksandmore.activities;
 
 
+import michael_juarez.foodtrucksandmore.R;
 import michael_juarez.foodtrucksandmore.data.FoodSpot;
 import michael_juarez.foodtrucksandmore.fragments.Fragment_FoodSpotList;
 import michael_juarez.foodtrucksandmore.fragments.Fragment_FoodSpotList_GridView;
@@ -8,6 +9,7 @@ import michael_juarez.foodtrucksandmore.fragments.Fragment_FoodSpotList_GridView
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -36,6 +38,17 @@ public class Activity_FoodSpotListGridView extends Activity_SingleFragmentActivi
         mFoodSpotListFragment.setArguments(bundle);
 
         return mFoodSpotListFragment;
+    }
+
+    @Override
+    protected void setupToolbar() {
+        mToolbar.setNavigationIcon(R.drawable.ic_backarrow);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
 }

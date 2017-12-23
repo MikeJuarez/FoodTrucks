@@ -3,6 +3,10 @@ package michael_juarez.foodtrucksandmore.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -26,6 +30,7 @@ public class Activity_FoodSpotDetails extends Activity_SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment(Bundle SavedInstanceState) {
+
         FoodSpot fs = (FoodSpot) getIntent().getSerializableExtra(KEY_ACTIVITY_FOODSPOTDETAILS_FOODSPOT);
 
         Bundle bundle = new Bundle();
@@ -38,6 +43,16 @@ public class Activity_FoodSpotDetails extends Activity_SingleFragmentActivity {
         return fragment;
     }
 
+    @Override
+    protected void setupToolbar() {
+        mToolbar.setNavigationIcon(R.drawable.ic_backarrow);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+    }
 
 
     @Override

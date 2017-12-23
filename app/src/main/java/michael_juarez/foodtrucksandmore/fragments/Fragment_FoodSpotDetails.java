@@ -7,6 +7,7 @@ import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -40,6 +41,8 @@ public class
 
 
 Fragment_FoodSpotDetails extends Fragment {
+    private static final String TAG = "Frag_FoodSpotDetails";
+
     private static final int LOADER_FAVORITE_CHECK = 0;
     public static final String KEY_IMAGE_LINK = "Fragment_FoodSpotDetails.KEY_IMAGE_LINK";
     public static final String KEY_FOODSPOT = "Fragment_FoodSpotDetails.KEY_FOODSPOT";
@@ -68,6 +71,7 @@ Fragment_FoodSpotDetails extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_foodspotdetails, container, false);
         unbinder = ButterKnife.bind(this, view);
+
 
         Bundle bundle = getArguments();
         mFoodSpot = (FoodSpot) bundle.getSerializable(KEY_FOODSPOT);
@@ -99,13 +103,13 @@ Fragment_FoodSpotDetails extends Fragment {
         for (int i = 0; i < mFoodSpot.getOpen_time().size(); i++) {
             String dayOfWeek = "";
             switch (i) {
-                case 0: dayOfWeek = "Monday:"; break;
-                case 1: dayOfWeek = "Tuesday:"; break;
-                case 2: dayOfWeek = "Wednesday:"; break;
-                case 3: dayOfWeek = "Thursday:"; break;
-                case 4: dayOfWeek = "Friday:"; break;
-                case 5: dayOfWeek = "Saturday:"; break;
-                case 6: dayOfWeek = "Sunday:"; break;
+                case 0: dayOfWeek = getActivity().getResources().getString(R.string.monday); break;
+                case 1: dayOfWeek = getActivity().getResources().getString(R.string.tuesday); break;
+                case 2: dayOfWeek = getActivity().getResources().getString(R.string.wednesday); break;
+                case 3: dayOfWeek = getActivity().getResources().getString(R.string.thursday); break;
+                case 4: dayOfWeek = getActivity().getResources().getString(R.string.friday); break;
+                case 5: dayOfWeek = getActivity().getResources().getString(R.string.saturday); break;
+                case 6: dayOfWeek = getActivity().getResources().getString(R.string.sunday); break;
             }
             hoursText += dayOfWeek + "\t\t\t\t\t" + mFoodSpot.getOpen_time().get(i) + " - " + mFoodSpot.getClose_time().get(i) + "\n";
         }
@@ -137,14 +141,6 @@ Fragment_FoodSpotDetails extends Fragment {
     public void onCreateOptionsMenu(final Menu menu, final MenuInflater menuInflater) {
         menuInflater.inflate(R.menu.foodspot_details_menu, menu);
 
-        ActionBar actionbar = ((AppCompatActivity)getActivity()).getSupportActionBar();
-
-        if (actionbar != null) {
-            actionbar.setHomeButtonEnabled(true);
-        }
-        // isFavorite will return true if the user clicked the FoodSpot using the Favorites Menu
-        // otherwise we need to check if this FoodSpot is in the Favorites List
-
         LoaderManager.LoaderCallbacks<Boolean> queryLoader = new LoaderManager.LoaderCallbacks<Boolean>() {
 
             @Override
@@ -172,7 +168,7 @@ Fragment_FoodSpotDetails extends Fragment {
 
                             return false;
                         } catch (Exception e) {
-                            Log.e("FoodSpotDetails: ", "Failed to asynchronously load data.");
+                            Log.e(TAG, getActivity().getResources().getString(R.string.error_load_asynchdata));
                             e.printStackTrace();
                             return false;
                         }
@@ -231,23 +227,29 @@ Fragment_FoodSpotDetails extends Fragment {
         FavoritesDbUtility favoritesDbUtility = FavoritesDbUtility.getInstance(getActivity());
         boolean result = favoritesDbUtility.insertFavorite(getActivity(), mFoodSpot);
         if (result)
-            Toast.makeText(getActivity(), mFoodSpot.getName() + " was succesfully added to your Favorites List", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), mFoodSpot.getName() +
+                           getActivity().getResources().getString(R.string.success_add_favorite), Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(getActivity(), "There was an error adding " + mFoodSpot.getName() + " to your Favorites List.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.error_pre_adding_favorite) +
+                           mFoodSpot.getName() +
+                           getActivity().getResources().getString(R.string.error_post_adding_favorite), Toast.LENGTH_SHORT).show();
     }
 
     private void removeFavorite() {
         FavoritesDbUtility favoritesDbUtility = FavoritesDbUtility.getInstance(getActivity());
         boolean result = favoritesDbUtility.removeFavorite(getActivity(), mFoodSpot);
         if (result)
-            Toast.makeText(getActivity(), mFoodSpot.getName() + " was succesfully removed from your Favorites List", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), mFoodSpot.getName() + getActivity().getResources().getString(R.string.success_remove_favorite), Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(getActivity(), "There was an error removing " + mFoodSpot.getName() + " from your Favorites List.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.error_post_removing_favorite) +
+                    mFoodSpot.getName() +
+                    getActivity().getResources().getString(R.string.error_post_removing_favorite), Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void onDestroy(){
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
 

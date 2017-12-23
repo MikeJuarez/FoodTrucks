@@ -29,14 +29,14 @@ public class FoodStyleDb {
     public void generateList(Context context) {
         mFoodStyleList = new ArrayList();
 
-        mFoodStyleList.add(new FoodStyle("All", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_brown), true));
-        mFoodStyleList.add(new FoodStyle("American", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_green), true));
-        mFoodStyleList.add(new FoodStyle("Latin", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_pink), true));
-        mFoodStyleList.add(new FoodStyle("Asian", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_purple), true));
-        mFoodStyleList.add(new FoodStyle("Italian", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_red), true));
-        mFoodStyleList.add(new FoodStyle("Indian", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_white), true));
-        mFoodStyleList.add(new FoodStyle("Dessert", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_yellow), true));
-        mFoodStyleList.add(new FoodStyle("Other", ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_brown), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.All), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_brown), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.American), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_green), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.Latin), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_pink), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.Asian), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_purple), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.Italian), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_red), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.Indian), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_white), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.Dessert), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_yellow), true));
+        mFoodStyleList.add(new FoodStyle(context.getResources().getString(R.string.Other), ContextCompat.getDrawable(context, R.drawable.ic_foodtruck_brown), true));
     }
 
     public ArrayList<FoodStyle> getFoodStyleList() {

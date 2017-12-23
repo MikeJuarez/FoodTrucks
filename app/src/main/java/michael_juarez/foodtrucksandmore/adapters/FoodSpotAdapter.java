@@ -19,8 +19,6 @@ import michael_juarez.foodtrucksandmore.R;
 import michael_juarez.foodtrucksandmore.data.FoodSpot;
 import michael_juarez.foodtrucksandmore.utilities.GlideApp;
 
-import static java.lang.Boolean.TRUE;
-
 
 /**
  * Created by user on 11/8/2017.
@@ -32,24 +30,21 @@ public class FoodSpotAdapter extends RecyclerView.Adapter<FoodSpotAdapter.ViewHo
     private ArrayList<FoodSpot> mFoodSpotList;
     private Context mContext;
     private ListItemClickListener mListItemClickListener; //If list item clicked, send info to next screen
-    private int lastPosition = -1; //Helps keep track of views that have already been animated
-    private boolean first3; // First 3 items in list have animations
-
-    //For ViewHolder animations
-    private int SLIDE_DURATION = 1500;
-    private static final int SLIDE_INCREMENT = 300;
-    private static final int SLIDE_LIMIT = 2100;
 
     private boolean mShouldAnimate;
+    private boolean mIsHorizontal;
+    private boolean mIsGridView;
 
 
-    public FoodSpotAdapter(ArrayList<FoodSpot> foodSpotList, Context context, ListItemClickListener listItemClickListener, boolean shouldAnimate) {
+    public FoodSpotAdapter(ArrayList<FoodSpot> foodSpotList, Context context, ListItemClickListener listItemClickListener, boolean shouldAnimate, boolean isHorizontal, boolean isGridView) {
         if (mFoodSpotList == null)
             mFoodSpotList = new ArrayList<>();
         mFoodSpotList = foodSpotList;
         mShouldAnimate = shouldAnimate;
         mContext = context;
         mListItemClickListener = listItemClickListener;
+        mIsHorizontal = isHorizontal;
+        mIsGridView = isGridView;
     }
 
     public interface ListItemClickListener {
@@ -63,8 +58,21 @@ public class FoodSpotAdapter extends RecyclerView.Adapter<FoodSpotAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_item_foodspot, parent, false);
+        View v = null;
+        if (!mIsGridView) {
+            v = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.list_item_foodspot_listview, parent, false);
+            return new ViewHolder(v);
+        }
+
+        if (!mIsHorizontal) {
+            v = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.list_item_foodspot_vertical, parent, false);
+        }
+        else {
+            v = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.list_item_foodspot_horizontal, parent, false);
+        }
 
         return new ViewHolder(v);
     }
@@ -73,7 +81,7 @@ public class FoodSpotAdapter extends RecyclerView.Adapter<FoodSpotAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, int position) {
         FoodSpot listItem = mFoodSpotList.get(position);
 
-        Typeface custom_font = Typeface.createFromAsset(mContext.getAssets(),  "fonts/app_font.ttf");
+        Typeface custom_font = Typeface.createFromAsset(mContext.getAssets(), "fonts/app_font.ttf");
         holder.mNameTextView.setTypeface(custom_font);
 
         GlideApp.with(mContext)
@@ -86,7 +94,7 @@ public class FoodSpotAdapter extends RecyclerView.Adapter<FoodSpotAdapter.ViewHo
             setAnimation(holder.itemView, position);
     }
 
-    private void setAnimation(View viewToAnimate, int position)    {
+    private void setAnimation(View viewToAnimate, int position) {
         // If the bound view wasn't previously displayed on screen, it's animated
         Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.fade_in);
         animation.setDuration(1500);
@@ -109,7 +117,7 @@ public class FoodSpotAdapter extends RecyclerView.Adapter<FoodSpotAdapter.ViewHo
         return mFoodSpotList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView mFoodSpotImageView;
         public TextView mNameTextView;
         public TextView mStyleTextView;

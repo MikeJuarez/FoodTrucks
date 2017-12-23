@@ -11,7 +11,7 @@ function saveRestaurant() {
 
 	var dbRef = firebase.database().ref('food_trucks');
 	$("#submit").click(function () {
-		var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + $("#address").val() + "," + $("#city").val() + "," + $("#state").val() + "," + $("#zip").val() + "&amp;" + "key=AIzaSyCC4_9U_rU9oprUFpqPp9C9RbjuB8oAHsk";
+		var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + $("#address").val() + "," + $("#city").val() + "," + $("#state").val() + "," + $("#zip").val() + "&" + "key=AIzaSyCC4_9U_rU9oprUFpqPp9C9RbjuB8oAHsk";
 		alert(url);
 		var response = JSON.parse(Get(url));
 
@@ -174,6 +174,7 @@ function saveRestaurant() {
 		var $menu_url = "";
 
 		$newMessageRef.set({
+			description: $("#description").val(),
 			email: $email,
 			name: $("#name").val(),
 			address: $("#address").val(),

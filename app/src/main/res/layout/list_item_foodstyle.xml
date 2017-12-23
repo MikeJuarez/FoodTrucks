@@ -13,6 +13,7 @@
 
         <ImageView
             android:id="@+id/list_item_foodstyle_iv"
+            android:contentDescription="FoodStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="@dimen/margins_space_between_views"
@@ -24,12 +25,12 @@
 
         <TextView
             android:id="@+id/list_item_foodstyle_name"
+            android:contentDescription="@string/contentdescription_foodname_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="American"
             style="@style/viewholder_text"
             android:textStyle="bold"
             android:textSize="32sp"
@@ -38,6 +39,7 @@
 
         <ImageView
             android:id="@+id/list_item_foodstyle_check"
+            android:contentDescription="FoodStyle CheckMark"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:src="@drawable/ic_checked"

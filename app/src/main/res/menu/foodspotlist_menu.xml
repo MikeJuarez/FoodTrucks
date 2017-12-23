@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/foodspotlist_menu"
+        android:icon="@drawable/ic_3dotsmenu"
+        android:title="@string/menu"
+        android:contentDescription="@string/menu"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/foodspotlist_menu_favorites"
+                android:title="@string/menu_favorites"
+                android:contentDescription="@string/menu_favorites"/>
+            <item
+                android:id="@+id/foodspotlist_menu_gridview"
+                android:title="@string/menu_gridview"
+                android:contentDescription="@string/menu_gridview"/>
+            <item
+                android:id="@+id/foodspotlist_menu_filter"
+                android:title="@string/menu_filter"
+                android:contentDescription="@string/menu_filter"/>
+        </menu>
+    </item>
+</menu>
